@@ -43,7 +43,6 @@ target_link_libraries(kde-sip-client
     Qt6::Quick
     Qt6::QuickControls2
     Qt6::Network
-    Qt6::Multimedia
     Qt6::DBus
     Qt6::Sql
     KF6::ConfigCore

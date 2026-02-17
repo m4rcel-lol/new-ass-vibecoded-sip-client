@@ -147,7 +147,7 @@ KWallet                        # Encrypted credentials
 ## Dependencies
 
 ### Required
-- Qt 6.4+ (Core, GUI, Widgets, Quick, Network, Multimedia, DBus, Sql)
+- Qt 6.4+ (Core, GUI, Widgets, Quick, Network, DBus, Sql)
 - KDE Frameworks 6 (Config, CoreAddons, I18n, Notifications, Wallet, StatusNotifierItem, KIO, Contacts, Kirigami)
 - PJSIP 2.x
 - PipeWire 0.3+
