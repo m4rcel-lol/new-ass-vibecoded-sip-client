@@ -25,7 +25,6 @@ find_package(Qt6 6.4 REQUIRED COMPONENTS
     Quick
     QuickControls2
     Network
-    Multimedia
     DBus
     Sql
 )
