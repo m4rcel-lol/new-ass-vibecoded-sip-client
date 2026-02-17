@@ -1,6 +1,17 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
+// PJSIP headers may define 'emit', 'signals', 'slots' macros that conflict with Qt
+#ifdef signals
+#undef signals
+#endif
+#ifdef slots
+#undef slots
+#endif
+#ifdef emit
+#undef emit
+#endif
+
 #include <QMainWindow>
 #include <QStackedWidget>
 #include <KStatusNotifierItem>

@@ -1,6 +1,17 @@
 #ifndef NETWORKMANAGER_H
 #define NETWORKMANAGER_H
 
+// PJSIP headers may define 'emit', 'signals', 'slots' macros that conflict with Qt
+#ifdef signals
+#undef signals
+#endif
+#ifdef slots
+#undef slots
+#endif
+#ifdef emit
+#undef emit
+#endif
+
 #include <QObject>
 #include <QString>
 
