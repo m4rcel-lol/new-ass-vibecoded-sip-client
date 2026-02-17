@@ -27,6 +27,7 @@ find_package(Qt6 6.4 REQUIRED COMPONENTS
     Network
     DBus
     Sql
+    Test
 )
 
 # KDE Frameworks 6
