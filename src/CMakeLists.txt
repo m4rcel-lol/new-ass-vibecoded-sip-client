@@ -1,0 +1,69 @@
+add_executable(kde-sip-client
+    main.cpp
+    core/sipengine.cpp
+    core/sipengine.h
+    core/sipaccount.cpp
+    core/sipaccount.h
+    core/sipcall.cpp
+    core/sipcall.h
+    media/audioengine.cpp
+    media/audioengine.h
+    media/pipewirebackend.cpp
+    media/pipewirebackend.h
+    network/networkmanager.cpp
+    network/networkmanager.h
+    accounts/accountmanager.cpp
+    accounts/accountmanager.h
+    config/configmanager.cpp
+    config/configmanager.h
+    security/credentialmanager.cpp
+    security/credentialmanager.h
+    ui/mainwindow.cpp
+    ui/mainwindow.h
+    ui/dialerpage.cpp
+    ui/dialerpage.h
+    ui/contactspage.cpp
+    ui/contactspage.h
+    ui/historypage.cpp
+    ui/historypage.h
+    ui/callpage.cpp
+    ui/callpage.h
+    ui/accountspage.cpp
+    ui/accountspage.h
+    ui/settingspage.cpp
+    ui/settingspage.h
+    utils/logger.cpp
+    utils/logger.h
+)
+
+target_link_libraries(kde-sip-client
+    Qt6::Core
+    Qt6::Gui
+    Qt6::Widgets
+    Qt6::Quick
+    Qt6::QuickControls2
+    Qt6::Network
+    Qt6::Multimedia
+    Qt6::DBus
+    Qt6::Sql
+    KF6::ConfigCore
+    KF6::ConfigGui
+    KF6::CoreAddons
+    KF6::I18n
+    KF6::Notifications
+    KF6::Wallet
+    KF6::StatusNotifierItem
+    KF6::KIOCore
+    KF6::Contacts
+    KF6::Kirigami
+    ${PJSIP_LIBRARIES}
+    ${PIPEWIRE_LIBRARIES}
+)
+
+target_include_directories(kde-sip-client PRIVATE
+    ${CMAKE_CURRENT_SOURCE_DIR}
+    ${PJSIP_INCLUDE_DIRS}
+    ${PIPEWIRE_INCLUDE_DIRS}
+)
+
+install(TARGETS kde-sip-client ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})

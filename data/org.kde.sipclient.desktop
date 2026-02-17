@@ -1,0 +1,13 @@
+[Desktop Entry]
+Name=KDE SIP Client
+GenericName=SIP Softphone
+Comment=Modern SIP softphone for KDE Plasma
+Exec=kde-sip-client
+Icon=phone
+Terminal=false
+Type=Application
+Categories=Qt;KDE;Network;Telephony;AudioVideo;
+Keywords=SIP;VoIP;Phone;Call;Telephony;
+X-DBUS-StartupType=Unique
+X-DBUS-ServiceName=org.kde.sipclient
+X-KDE-StartupNotify=true

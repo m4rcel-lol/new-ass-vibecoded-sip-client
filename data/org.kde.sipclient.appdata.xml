@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>org.kde.sipclient</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0-or-later</project_license>
+  <name>KDE SIP Client</name>
+  <summary>Modern SIP softphone for KDE Plasma</summary>
+
+  <description>
+    <p>
+      KDE SIP Client is a native, high-performance SIP softphone built specifically for
+      KDE Plasma desktop environment. It provides a modern, beautiful interface while
+      delivering exceptional performance and stability.
+    </p>
+    <p>Features:</p>
+    <ul>
+      <li>Full SIP protocol support (UDP/TCP/TLS)</li>
+      <li>SRTP encryption for secure calls</li>
+      <li>PipeWire native audio integration</li>
+      <li>Multiple account support</li>
+      <li>Call transfer, hold, and conferencing</li>
+      <li>DTMF support (RFC 2833 and SIP INFO)</li>
+      <li>KWallet integration for secure credential storage</li>
+      <li>Native Plasma notifications</li>
+      <li>System tray integration</li>
+      <li>Follows KDE HIG and theme system</li>
+    </ul>
+  </description>
+
+  <launchable type="desktop-id">org.kde.sipclient.desktop</launchable>
+
+  <screenshots>
+    <screenshot type="default">
+      <caption>Main dialer interface</caption>
+    </screenshot>
+  </screenshots>
+
+  <url type="homepage">https://github.com/m4rcel-lol/new-ass-vibecoded-sip-client</url>
+  <url type="bugtracker">https://github.com/m4rcel-lol/new-ass-vibecoded-sip-client/issues</url>
+
+  <developer_name>KDE SIP Client Team</developer_name>
+
+  <categories>
+    <category>Network</category>
+    <category>Telephony</category>
+    <category>AudioVideo</category>
+  </categories>
+
+  <releases>
+    <release version="1.0.0" date="2026-02-17">
+      <description>
+        <p>Initial release</p>
+      </description>
+    </release>
+  </releases>
+
+  <content_rating type="oars-1.1" />
+</component>

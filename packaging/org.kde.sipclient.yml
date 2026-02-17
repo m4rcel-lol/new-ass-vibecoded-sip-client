@@ -1,0 +1,37 @@
+app-id: org.kde.sipclient
+runtime: org.kde.Platform
+runtime-version: '6.6'
+sdk: org.kde.Sdk
+command: kde-sip-client
+finish-args:
+  - --share=ipc
+  - --share=network
+  - --socket=wayland
+  - --socket=fallback-x11
+  - --socket=pulseaudio
+  - --device=all
+  - --talk-name=org.freedesktop.secrets
+  - --talk-name=org.kde.StatusNotifierWatcher
+  - --talk-name=org.freedesktop.Notifications
+  - --filesystem=xdg-config/kdeglobals:ro
+
+modules:
+  - name: pjproject
+    buildsystem: simple
+    build-commands:
+      - ./configure --prefix=/app --enable-shared --disable-video
+      - make dep
+      - make
+      - make install
+    sources:
+      - type: archive
+        url: https://github.com/pjsip/pjproject/archive/refs/tags/2.14.tar.gz
+        sha256: 0e8ce9e3ebdf7df7a5fa26af891d96eb8c7a75f2e867cbf7c30c60e9e2d79b3f
+
+  - name: kde-sip-client
+    buildsystem: cmake-ninja
+    config-opts:
+      - -DCMAKE_BUILD_TYPE=Release
+    sources:
+      - type: dir
+        path: ..
