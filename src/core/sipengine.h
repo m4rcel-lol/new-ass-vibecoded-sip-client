@@ -1,11 +1,23 @@
 #ifndef SIPENGINE_H
 #define SIPENGINE_H
 
+#include <pjsua2.hpp>
+
+// PJSIP headers may define 'emit', 'signals', 'slots' macros that conflict with Qt
+#ifdef signals
+#undef signals
+#endif
+#ifdef slots
+#undef slots
+#endif
+#ifdef emit
+#undef emit
+#endif
+
 #include <QObject>
 #include <QThread>
 #include <QMutex>
 #include <QList>
-#include <pjsua2.hpp>
 #include "sipaccount.h"
 #include "sipcall.h"
 
