@@ -1,8 +1,20 @@
 #ifndef SIPACCOUNT_H
 #define SIPACCOUNT_H
 
-#include <QObject>
 #include <pjsua2.hpp>
+
+// PJSIP headers may define 'emit', 'signals', 'slots' macros that conflict with Qt
+#ifdef signals
+#undef signals
+#endif
+#ifdef slots
+#undef slots
+#endif
+#ifdef emit
+#undef emit
+#endif
+
+#include <QObject>
 
 /**
  * @brief The SipAccount class represents a SIP account

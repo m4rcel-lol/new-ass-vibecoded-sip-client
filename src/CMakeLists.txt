@@ -65,4 +65,8 @@ target_include_directories(kde-sip-client PRIVATE
     ${PIPEWIRE_INCLUDE_DIRS}
 )
 
+target_compile_definitions(kde-sip-client PRIVATE
+    PJ_AUTOCONF=1
+)
+
 install(TARGETS kde-sip-client ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
