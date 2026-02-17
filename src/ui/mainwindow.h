@@ -2,6 +2,8 @@
 #define MAINWINDOW_H
 
 // PJSIP headers may define 'emit', 'signals', 'slots' macros that conflict with Qt
+// Only undef if QObject hasn't been included yet (to avoid removing Qt's definitions)
+#ifndef QOBJECT_H
 #ifdef signals
 #undef signals
 #endif
@@ -10,6 +12,7 @@
 #endif
 #ifdef emit
 #undef emit
+#endif
 #endif
 
 #include <QMainWindow>
