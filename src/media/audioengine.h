@@ -1,6 +1,17 @@
 #ifndef AUDIOENGINE_H
 #define AUDIOENGINE_H
 
+// PJSIP headers may define 'emit', 'signals', 'slots' macros that conflict with Qt
+#ifdef signals
+#undef signals
+#endif
+#ifdef slots
+#undef slots
+#endif
+#ifdef emit
+#undef emit
+#endif
+
 #include <QObject>
 #include <QList>
 #include <QString>
